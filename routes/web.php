@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\File;
 |
 */
 
-Route::get('/', [PostController::class, 'index'])->name('home');
+Route::get('/', function(){
+    return 'Home';
+});
 
-Route::get('/posts/{post:slug}', [PostController::class, 'show']);
